@@ -1,0 +1,74 @@
+<%- include('./partials/header') %> 
+
+<link rel="stylesheet" href="/stylesheets/crear-productos-grid.css">
+
+    <form class="contenedor" action="/products/edit/<%= products.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <h3 class="header">Nuevo Producto</h3>
+        <div class="foto preview-imagen" id="imagePreview">
+            <img src="/images/<%= products.imagen %>" alt="" class="preview-imagen__imagen" id="previewimg">
+            <span class="preview-imagen__text" id="previewtxt">Preview Imágen</span>
+        </div>
+        <div class="label1">
+            <label for="">Nombre</label>
+        </div>
+        <div class="input1">
+            <input type="text" name="nombre" value="<%= products.nombre %>">
+        </div>
+        <div class="label2">
+            <label for="">Cantidad unidades</label>
+        </div>
+        <div class="input2">
+            <input type="number" name="unidades_disponibles" value="<%= products.unidades_disponibles %>" min="0">
+        </div>
+        <div class="label3">
+            <label for="">Marca</label>
+        </div>
+        <div class="input3">
+            <select name="marca_id" id="" class="formulario-input-producto">
+                <% marcas.forEach(marca => { %>
+                    <% if (products.marca_id === marca.id) { %>
+                        <option value="<%= marca.id %>" selected> <%= marca.nombre %> </option>
+                    <% } else {%>
+                        <option value="<%= marca.id %>"> <%= marca.nombre %> </option>
+              <%  }}) %>  
+            </select>
+        </div>
+        <div class="label4">
+            <label for="">Precio</label>
+        </div>
+        <div class="input4">
+            <input type="number" name="precio" value="<%= products.precio %>" min="0">
+        </div>
+        <div class="label5">
+            <label for="">Tipo</label>
+        </div>
+        <div class="input5">
+            <select name="tipo_id" id="" class="formulario-input-producto">
+                <% tipos.forEach(tipo => { %>
+                    <% if (products.tipo_id === tipo.id) { %>
+                        <option value="<%= tipo.id %>" selected> <%= tipo.tipo %> </option>
+                    <% } else {%>
+                        <option value="<%= tipo.id %>"> <%= tipo.tipo %> </option>
+              <%  }}) %> 
+                </select>
+        </div>
+        <div class="label6">
+            <label for="">Descuento</label>
+        </div>
+        <div class="input6">
+            <input type="number" name="descuento" value="<%= products.descuento %>" min="0" max="100">
+        </div>
+        <div class="fotoBoton">
+            <input type="file" id="inpFile" name="imagen" class="fotoInput">
+        </div>
+        <div class="descripcion">
+            <textarea name="descripcion" id="" cols="100" rows="10" placeholder="Descripción del Producto"><%= products.descripcion%></textarea>
+        </div>
+        <div class="crear">
+            <button type="submit" class="crearBoton">Editar Producto</button>
+        </div>
+    </form>
+    
+<script src="/scripts/editImage.js"></script>
+<script src="/scripts/productForm.js"></script>
+<%- include('./partials/footer') %> 

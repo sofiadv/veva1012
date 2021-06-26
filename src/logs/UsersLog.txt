@@ -1,0 +1,9 @@
+El usuario ingreso a la ruta: /
+El usuario ingreso a la ruta: /products
+El usuario ingreso a la ruta: /images/cognac.jpg
+El usuario ingreso a la ruta: /products
+El usuario ingreso a la ruta: /contacto
+El usuario ingreso a la ruta: /img/ig.png
+El usuario ingreso a la ruta: /img/fb.png
+El usuario ingreso a la ruta: /users/login
+El usuario ingreso a la ruta: /users/register

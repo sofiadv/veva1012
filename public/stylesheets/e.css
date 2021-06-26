@@ -1,0 +1,179 @@
+
+
+/*Mobile*/
+
+
+/*Section*/
+
+.pr-promo{
+    margin: auto;
+    margin-top: 3%;
+}
+
+section{
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    background-color:#3a3636;
+}
+
+/*Banner*/
+
+.banner-container{
+    margin-top: 3%;
+   display: flex;
+   justify-content: center;
+}
+
+.slider{
+    width: 95%;
+    border: solid rgb(77, 75, 75) 2px;
+    box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    margin: auto;
+}
+
+/*Productos*/
+.art-container{
+    display: grid;
+}
+
+article{
+    margin-top: 1%;
+}
+
+.foto-producto{
+    margin: auto;
+    width: 95%; 
+}
+.producto{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.img-prod{
+    width: 100%;
+    border: solid rgb(77, 75, 75) 2px;
+    border-radius: 5%;
+    box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, .5);
+}
+
+h2{
+    font-family: Dosis;
+ color: white;
+ margin-left: 3%;
+}
+
+p{
+    
+    color: white;
+    font-size: 10pt;
+    margin-left: 3%;
+}
+
+
+
+
+
+
+/*Tablet*/ @media (min-width: 768px) {
+
+    
+    /*Section Tablet*/
+
+
+    
+    /*Productos Tablet*/
+   .pr-promo{
+       width: 100%;
+      text-align: center;
+      margin-top: 5%;
+   } 
+   .promo{
+       width: 50%;
+       margin: auto;
+   }
+   .banner-container{
+       display: flex;
+       align-items: center;
+   }
+   section{
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+}
+
+.art-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+article{
+    width: 45%;
+    margin-left: 0;
+}
+.foto-producto{
+    width: 100%;
+}
+.foto-producto img{
+    width: 100%;
+}
+
+    h2{
+     margin-bottom: 0.5%;
+     font-size: 24pt;
+    }
+    
+    p{
+        font-size: 14pt;
+    }
+
+    /*Footer Tablet*/
+
+    
+@media (min-width: 1024px){
+    /*Banner Desktop*/
+
+    /*Producto Desktop*/
+    .pr-promo{
+        font-size: 30pt;
+    }
+    section{
+        width: 100%;
+        display:flex;
+        flex-direction:column;
+    }
+
+    .art-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    article{
+        width: 45%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5%;
+        margin-left: 0;
+    }
+
+    .art1{
+        padding:0;
+        margin-top:4%;
+        width: 33%;
+    }
+    .foto-producto{
+        width: 100%;
+    }
+    .foto-producto img{
+        width: 100%;
+    }
+
+    /*Footer Desktop*/
+
+    
+}
+}

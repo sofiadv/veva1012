@@ -1,0 +1,220 @@
+body{
+  background-color: #3a3636;
+}
+.navbar{
+  padding: 0;
+}
+.avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 80%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+::placeholder{
+  font-size: 15px;
+}
+.formulario-checkbox {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.formulario {
+    margin-bottom: 1%;
+  }
+  .titulo-formulario {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18pt;
+    color: whitesmoke;
+    margin: 5%;
+  }
+  .formulario-grande {
+    background-color: #3a3636;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+  }
+  .formulario-producto{
+    background-color: #3a3636;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .formulario-label {
+    margin: 1%;
+    color: whitesmoke;
+    padding-left: 5%;
+  }
+  .formulario-input-usuario {
+    display: block;
+    width: 86%;
+    margin: auto;
+    margin-bottom: 2%;
+    font-size: 15pt;
+    text-align: center;
+    padding: 3%;
+    border: none;
+    background: none;
+    border-bottom: 1px solid whitesmoke;
+    color: whitesmoke;
+    outline: 0;
+}
+  .formulario-input-producto {
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: none;
+    border: solid 1px var(--gray);
+    padding: 0 15px;
+  }
+  .registrar-boton {
+    background-color: #c62828;
+    font-size: 15pt;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    border-radius: 5px;
+    border: none;
+    margin: auto;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    width: 50%;
+  }
+  textarea.formulario-input-producto {
+    min-height: 140px;
+    resize: vertical;
+    padding: 15px;
+  }
+  .titulo-producto{
+    text-align: center;
+    font-weight: 400;
+    font-size: 24px;
+    margin-top: 10px;
+    color: #c62828;
+  }
+  .preview-imagen{
+    width: 80%;
+    min-height: 30%;
+    border: 2px solid #c62828;
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #c62828;
+  }
+  .preview-imagen__imagen{
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .foto-producto-boton{
+    border-radius: 5px;
+    background-color: #c62828;
+    margin: auto;
+    margin-top: 2%;
+    align-content: center;
+    font-size: 13pt;
+    width: 80%;
+  }
+  
+  @media (min-width: 768px){
+    
+    .container-form{
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+    .formulario-grande{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .password2{
+      font-size: 20pt;
+      color: whitesmoke;
+      grid-column: 1 / 3;
+
+    }
+    .titulo-formulario{
+      font-size: 26pt;
+    }
+    .formulario-label{
+    width: 100%;
+    justify-self: center;
+    }
+    .formulario-input-usuario{
+      width: 80%;
+    }
+  
+  .titulo-producto{
+    font-size: 25pt;
+  }
+  .foto-producto-boton{
+    font-size: 16pt;
+  }
+  .formulario-label{
+    font-size: 20pt;
+    padding-left: 8%;
+  }
+  .registrar-boton{
+    margin-top: 2%;
+    width: 35%;
+  }
+  }
+@media(min-width: 1024px){
+  .titulo-formulario{
+    font-size: 25pt;
+  }
+  .formulario-label{
+    font-size: 20pt;
+    display: flex;
+    text-align: center;
+  }
+  .formulario-input-usuario{
+    font-size: 20pt;
+  }
+  .foto-producto-boton{
+    width: 31%;
+    margin-left: 10%;
+  }
+  .formulario-checkbox{
+    display: inline-block;
+    margin-left: 17%;
+  }
+  .registrar-boton{
+    margin-top: 2%;
+  }
+  .titulo-producto{
+    font-size: 32pt;
+  }
+  .formulario-label{
+    font-size: 25pt;
+  }
+}
+ /* @media (max-width: 768px) {
+
+  .formulario-input-usuario {
+      width: 100%;
+  }
+  .titulo-producto{
+    text-align: center;
+  }
+}*/

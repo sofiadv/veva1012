@@ -1,0 +1,38 @@
+.titulo {
+    margin: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.contenedor {
+    display: grid;
+    margin: auto;
+    gap: 20px;
+    width: 90%;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 230px;
+}
+.producto{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.producto .foto-producto{
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+
+.producto .foto-producto img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.producto .texto-producto {
+    width: 100%;
+    height: 30%;
+}

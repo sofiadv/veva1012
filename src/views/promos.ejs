@@ -1,0 +1,25 @@
+<%- include('./partials/header') %> 
+
+    <link rel="stylesheet" href="/stylesheets/grid-producto.css">
+    <h3 class="titulo">
+        Productos con Grandes Ofertas
+    </h3>
+    <main class="contenedor">
+        <% products.forEach(product => { %>
+                <div class="producto-contenedor">
+                    <div class="producto">
+                        <div class="foto-producto">
+                            <img class="img-prod" src="/images/<%= product.imagen %>" alt="">
+                        </div>
+                        <div class="texto-producto">
+                        <a href="/products/detail/<%= product.id %> ">
+                            <h2>-<%= product.descuento %>%  <%= product.nombre %></h2>
+                            <p><%= product.descripcion %> </p>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+    </main>
+
+<%- include('./partials/footer') %>

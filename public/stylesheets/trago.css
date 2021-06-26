@@ -1,0 +1,72 @@
+.recetas{
+    display: none;
+}
+.trago1{
+    width: 80%;
+    margin: auto;
+}
+.trago-id{
+    display: none;
+}
+.ingredientes{
+    color: #e7e7e7;
+
+}
+.preparacion{
+    color: #e7e7e7;
+}
+h1{
+    font-family: Dosis;
+ color: white;
+ text-align: center;
+ background-color: #3a3636;
+}
+h2{
+    font-family: Dosis;
+ color: white;
+ margin-top: 5%;
+ margin-bottom: 3%;
+}
+.trago-big-cont{
+    display: grid;
+    text-align: center;
+    background-color: #3a3636;
+}
+.big-cont-2{
+    background-color: #3a3636;
+}
+.foto-producto{
+    margin: auto;
+    width: 95%; 
+}
+.producto{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.img-prod{
+    width: 100%;
+    border: solid rgb(77, 75, 75) 2px;
+    border-radius: 5%;
+    box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, .5);
+}
+.trago{
+    margin-bottom: 3%;
+}
+
+@media(min-width: 768px){
+    .trago-big-cont{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .trago{
+        width: 45%;
+    }
+}
+@media(min-width: 1024px){
+    .trago{
+        width: 33%;
+    }
+}

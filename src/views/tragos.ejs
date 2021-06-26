@@ -1,0 +1,33 @@
+<%- include('./partials/header') %>
+
+<link rel="stylesheet" href="./stylesheets/trago.css">
+<div class="tragos-vs">
+    <h1>Tragos en Casa</h1>
+        <div class="trago-big-cont">
+            <% tragos.forEach(trago => { %>
+                    <div class="trago">
+                        <h2><%= trago.nombre %> </h2>
+                        <div class="trago-id">
+                            <%= trago.id %> 
+                        </div>
+                        <div class="foto-producto">
+                            <img class="img-prod " src="/images/<%= trago.imagen %>" alt="" >  
+                            <div class="recetas">
+                                <div class="ingredientes">
+                                    <h3>Ingredientes</h3>
+                                    <p><%= trago.ingredientes %> </p>
+                                </div>
+                                <div class="preparacion">
+                                    <h3>Preparacion</h3>
+                                    <p><%= trago.preparacion %> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <% }) %>
+        </div>
+</div>
+
+
+<script src="./scripts/trago.js"></script>
+<%- include('./partials/footer') %> 

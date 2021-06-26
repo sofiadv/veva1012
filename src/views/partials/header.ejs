@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEVA 1012</title>
+</head>
+<body>
+    <div class="father-header-container">
+    <div class="maestro-div">
+        <div class="cuenta">
+        <% if (typeof sessionUserId != 'undefined') { %>
+     
+            <div class="registro">
+                <a href="/users/profile" class="vinculo">Bienvenido/a <%= users.first_name %> </a>
+            </div>
+            <div class="inicio-sesion">
+                <a href="/users/logout" class="vinculo">Cerrar sesión</a>
+            </div>
+                <% } 
+                else {%>
+            <div class="registro">
+                <a href="/users/register" class="vinculo">Registrate</a>
+            </div>
+            <div class="inicio-sesion">
+                <a href="/users/login" class="vinculo">Iniciar sesión</a>
+            </div>
+                <% } %>
+    </div>
+</div>
+
+<div class="header-container">
+    <a href="/"> 
+        <div class="logo-container"><img src="../../images/logo3.png" alt="" class="logo"></a>
+        </div>
+
+        <div class="carrito-lupa-container">
+            <div class="lupa-container">
+                <img src="../../images/lupa (4).png" alt="" class="lupa">
+            </div>
+            <div class="carrito-lupa-c">
+            <a class="cant-carrito" href="/products/carrito">
+                <img src="../../images/carrito1.png" alt="" class="carrito">
+               <% if (carritoUserId) { %>
+               <div>
+                <label class="txt"><%= carritoUserId %></label>
+            </div>
+               <% } %>
+            </a>
+            </div>
+</div>
+</div>
+</div>
+<div class="big-cont">
+<div class="navbar">
+    <nav>
+<ul class="formulario">
+   <a href="/products"><li>Productos</li></a>
+   <a href="/promos"><li>Promos</li></a>
+   <a href="#"><li>Marcas</li></a>
+   <a href="#"><li>Categorias</li></a>
+   <a href="/tragos"><li>Tragos</li></a>
+   <% if (typeof sessionUserId != 'undefined' && users.rol == 1) { %>
+   <a  href="/products/create"><li>Agregar Producto</li></a>
+   <% } else { %>
+   <a href="/contacto"><li>Contacto</li></a>
+    <% } %>
+</ul>
+</nav>
+

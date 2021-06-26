@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <!-- Font Awesome Stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<!-- Bootstrap Grid Stylesheet -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- Own Stylesheet -->
+	<link rel="stylesheet" href="/stylesheets/formularios.css">
+</head>
+<body>
+    <%- include('./partials/header') %> 
+
+    <div class="container">
+        <div class="col-12">
+        <h1 class="titulo-producto">Carga de Productos</h1>
+        </div>
+        <div class="row formulario-producto">
+                <form action="/products/edit/<%= products.id %>?_method=PUT" method="POST" class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="preview-imagen" id="imagePreview">
+                            <img src="/<%= products.imagen%> " alt="" class="preview-imagen__imagen" id="previewimg">
+                            <span class="preview-imagen__text" id="previewtxt">Preview Imágen</span>
+                        </div>
+                        <div class="foto-producto-boton">
+                            <input type="file" name="imagen" id="inpFile">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="col-12 col-md-10">
+                            <label for="nombre" class="formulario-label">Nombre del Producto:</label>
+                            <input type="text" name="nombre" value= "<%= products.nombre %>" class="formulario-input-producto">
+                        </div>
+                        <!-- <div class="col-12 col-md-10">
+                            <label for="categoria" class="formulario-label">Categoría:</label>
+                            <input type="text" name="categoria" value= "<%= products.categoria %>" class="formulario-input-producto">
+                        </div>
+                        <div class="col-12 col-md-10">
+                            <label for="subcategoria" class="formulario-label">Sub Categoria:</label>
+                            <input type="text" name="subcategoria" value= "<%= products.subcategoria %>" class="formulario-input-producto">
+                        </div> -->
+                        <div class="col-12 col-md-10">
+                            <label for="precio" class="formulario-label">Valor del Producto:</label>
+                            <input type="text" name="precio" value= "<%= products.precio %>" class="formulario-input-producto">
+                        </div>
+                        <div class="col-12 col-md-10">
+                            <label for="marca" class="formulario-label">Marca:</label>
+                            <select name="marca_id" id="" class="formulario-input-producto">
+                                <% marcas.forEach(marca => { %>
+                                    <% if (products.marca_id === marca.id) { %>
+                                        <option value="<%= marca.id %>" selected> <%= marca.nombre %> </option>
+                                    <% } else {%>
+                                        <option value="<%= marca.id %>"> <%= marca.nombre %> </option>
+                              <%  }}) %> 
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-10">
+                            <label for="tipo" class="formulario-label">Tipo de Bebida:</label>
+                            <select name="tipo_id" id="" class="formulario-input-producto">
+                                <% tipos.forEach(tipo => { %>
+                                    <% if (products.tipo_id === tipo.id) { %>
+                                        <option value="<%= tipo.id %>" selected> <%= tipo.tipo %> </option>
+                                    <% } else {%>
+                                        <option value="<%= tipo.id %>"> <%= tipo.tipo %> </option>
+                              <%  }}) %> 
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-10">
+                            <label for="unidades_disponibles" class="formulario-label">Unidades disponibles:</label>
+                            <input type="text" name="unidades_disponibles" value= "<%= products.unidades_disponibles %>" class="formulario-input-producto">
+                        </div>
+                        <div class="col-12 col-md-10">
+                            <label for="descuento" class="formulario-label">Descuento:</label>
+                            <input type="text" name="descuento" value= "<%= products.descuento %>" class="formulario-input-producto">
+                        </div>
+                        <div class="col-12 col-md-10">
+                            <label for="descripcion" class="formulario-label">Descipción:</label>
+                            <textarea name="descripcion" id="descripcion"  class="formulario-input-producto"><%= products.descripcion %></textarea>
+                        </div>
+                    </div>
+                            <div class="col-12">
+                                <button type="submit" class="registrar-boton">Editar Producto</button>
+                            </div>
+                        </form>
+                        <form action="/products/delete/<%= products.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                            <button type="submit" id="deleteButton" class="registrar-boton">ELIMINAR</button>
+                        </form>
+        </div>
+    </div>
+    <script src="/scripts/imagePreview.js"></script>
+    <script src="/scripts/confirmDelete.js"></script>
+
+	<!-- /todos los productos -->
+
+	<%- include('./partials/footer') %> 

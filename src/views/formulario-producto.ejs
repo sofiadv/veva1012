@@ -1,0 +1,68 @@
+<%- include('./partials/header') %> 
+
+<link rel="stylesheet" href="../stylesheets/crear-productos-grid.css">
+
+    <form class="contenedor product-form" action="/products/create" method="POST" enctype="multipart/form-data">
+        <h3 class="header">Nuevo Producto</h3>
+        <div class="foto preview-imagen" id="imagePreview">
+            <img src="" alt="" class="preview-imagen__imagen" id="previewimg">
+            <span class="preview-imagen__text" id="previewtxt">Preview Imágen</span>
+        </div>
+        <div class="label1">
+            <label for="">Nombre</label>
+        </div>
+        <div class="input1">
+            <input type="text" id="nombre" name="nombre">
+        </div>
+        <div class="label2">
+            <label for="">Cantidad unidades</label>
+        </div>
+        <div class="input2">
+            <input type="number" id="unidades" name="unidades_disponibles" min="0">
+        </div>
+        <div class="label3">
+            <label for="">Marca</label>
+        </div>
+        <div class="input3">
+            <select name="marca_id" id="marca" class="formulario-input-producto">
+                <% marcas.forEach(marca => { %>
+                    <option value="<%= marca.id%>" > <%= marca.nombre %> </option>
+              <%  }) %> 
+            </select>
+        </div>
+        <div class="label4">
+            <label for="">Precio</label>
+        </div>
+        <div class="input4">
+            <input type="number" id="precio" name="precio" min="0">
+        </div>
+        <div class="label5">
+            <label for="">Tipo</label>
+        </div>
+        <div class="input5">
+            <select name="tipo_id" id="tipo" class="formulario-input-producto">
+                <% tipos.forEach(tipo => { %>
+                    <option value="<%= tipo.id%>" > <%= tipo.tipo %> </option>
+              <%  }) %> 
+                </select>
+        </div>
+        <div class="label6">
+            <label for="">Descuento</label>
+        </div>
+        <div class="input6">
+            <input type="number" id="descuento" name="descuento" min="0" max="100">
+        </div>
+        <div class="fotoBoton">
+            <input type="file" id="inpFile" name="imagen" class="fotoInput">
+        </div>
+        <div class="descripcion">
+            <textarea name="descripcion" id="descripcion" placeholder="Descripción del Producto"></textarea>
+        </div>
+        <div class="crear">
+            <button type="submit" class="crearBoton">Agregar Producto</button>
+        </div>
+    </form>
+    
+<script src="/scripts/imagePreview.js"></script>
+<script src="/scripts/productForm.js"></script>
+<%- include('./partials/footer') %> 

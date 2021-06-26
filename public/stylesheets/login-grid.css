@@ -1,0 +1,93 @@
+.contenedor {
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px;
+    width: 90%;
+    gap: 20px;
+    color: whitesmoke;
+    grid-auto-rows: 60px;
+    justify-content: center;
+    align-content: center;
+    grid-template-areas: "titulo titulo titulo titulo"
+                         "label1 label1 label2 label2"
+                         "input1 input1 input2 input2"
+                         "checkbxlbl checkbxinp login login";
+}
+
+.contenedor .titulo{
+    grid-area: titulo;
+    text-align: center;
+    font-size: 50px;
+}
+.contenedor .label1{
+    grid-area: label1;
+    text-align: center;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contenedor .label2{
+    grid-area: label2;
+    text-align: center;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contenedor .input1{
+    grid-area: input1;
+    justify-self: center;
+    align-self: center;
+    width: 70%;
+    height: 50%;
+}
+.contenedor .input2{
+    grid-area: input2;
+    justify-self: center;
+    align-self: center;
+    width: 70%;
+    height: 50%;
+}
+.contenedor .checkbxlbl{
+    grid-area: checkbxlbl;
+    justify-self: end;
+    align-self: start;
+    font-size: 30px;
+}
+.contenedor .checkbxinp{
+    grid-area: checkbxinp;
+    justify-self: center;
+    align-self: start;
+    width: 40%;
+    height: 40%;
+}
+.contenedor .login{
+    grid-area: login;
+    justify-self: stretch;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    background: #3a3636;
+    text-align: center;
+    color: white;
+    border-bottom: 2px whitesmoke solid;
+}
+
+.ingresar {
+    width: 100%;
+    height: 50%;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: red;
+}
+
+.checkbx label {
+    justify-self: start;
+}

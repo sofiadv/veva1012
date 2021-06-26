@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Open+Sans&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Open Arial, Helvetica, sans-serif;
+}
+
+/*Mobile*/
+
+/*Header*/
+.father-header-container{
+    background-image: url('/images/wood.jpg');
+}
+
+.header-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+.cuenta{
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 10pt;
+    margin-bottom: 2%;
+    margin-right:0% ;
+    margin-left:2% ;
+}
+
+.registro{
+    width: 49%;
+    background-color: #c62828;
+    text-align: center;
+    height:25px;
+    padding-top: 1%;
+    margin-top:2% ;
+    border-radius: 2%;
+}
+
+.inicio-sesion{
+    width: 49%;
+    background-color: #c62828;
+    text-align: center;
+    height:25px;
+    padding-top: 1%;
+    margin-top:2% ;
+    border-radius: 2%;
+}
+
+a{
+    text-decoration: none;
+    color:#E0E0E0;
+}
+
+.logo{
+    width:100%;
+    border-radius: 2%;
+}
+
+.logo-container{
+    width: 25%;
+}
+
+.carrito-lupa-container{
+    width: 10%;
+    right: 0;
+    top: 6.5%;
+    position: fixed;
+    margin-right: 1%;
+}
+
+.lupa-container{
+    width: 73%;
+    background-color: #c62828;
+    padding: 5%;
+    margin-bottom: 10%;
+    border-radius: 20%;
+}
+
+.carrito-lupa-c{
+    width: 73%;
+    background-color: #c62828;
+    padding: 5%;
+    border-radius: 20%;
+}
+
+.lupa{
+    width: 100%;
+}
+
+.carrito{
+    width: 100%;
+    margin-top: 1%;
+}
+
+/*Navegador*/
+.big-cont{
+    width: 100%;
+    background-color: #3a3636;
+}
+.navbar{
+    background-color: #3a3636;
+}
+
+nav{
+    width: 100%;
+    background-color: #3a3636;
+}
+
+ul{
+list-style: none;
+text-align: center;
+}
+
+li{
+    background-color:#c62828;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+.ultimo-li{
+    border-bottom: 0;
+}
+
+ul.formulario a li{
+color:#E4E4E4;
+font-weight: bold;
+font-size: 11pt;
+}
+
+/*Tablet*/ @media (min-width: 768px) {
+
+    /*Navegador Tablet*/
+    .father-header-container{
+        display: flex;  
+        flex-wrap: nowrap;
+    }
+    .header-container{
+        width: 13%;
+        margin-left: 3%;
+        margin-top: 1%;
+    }
+    .logo-container{
+        order: 0;
+        width: 100%;
+    margin-top: 2%
+    }
+    .maestro-div{
+        width: 35%;
+        order: 1;
+        margin-left: 18%;
+        margin-top: 5%;
+    }
+    ul.formulario a li{
+        font-size: 15pt;
+        display:inline-block;
+        }
+    
+    li{
+        width: 18.9%; 
+        height:40px;
+    }
+
+    nav{
+        background-color: #c62828;
+    }
+
+    
+    ul.formulario a li{
+    font-size: 15pt;
+    display:inline-block;
+    }
+
+.inicio-sesion{
+    padding-top: 0.5%;
+}
+
+.registro {
+    padding-top: 0.5%;
+}
+.carrito-lupa-container {
+    width: 9%;
+    right: 0;
+    top: 1%;
+    position: fixed;
+    margin-right: 1%;
+}
+.inicio-sesion{
+    background-color: #c62828;
+}
+.vinculo{
+    font-size: 13pt;
+    text-decoration: none;
+}
+.registro{
+    width: 49%;
+    height:35px;
+    padding-top: 1%;
+    margin-top: 0px;
+    background: none;
+}
+
+.inicio-sesion{
+    width: 49%;
+    height:35px;
+    padding-top: 1%;
+    margin-top: 0px;
+    margin-left: 0%;
+    background: none;
+
+}
+.carrito-lupa-container{
+    width: 4%;
+    right: 1.8%;
+    top:10%;
+}
+.carrito-lupa-container {
+    width: 6%;
+    right: 0%;
+    top: 1%;
+}
+    ul.formulario a li {
+        font-size: 15pt;
+        display: inline-block;
+        height: 10%;
+        margin-top: 0;
+        width: 16%;
+    }
+}
+@media (min-width: 1024px){
+.carrito-lupa-container{
+    position: absolute;
+    margin-top: 2%;
+}
+.vinculo{
+    font-size: 20pt;
+    font-weight: normal;
+}
+.inicio-sesion{
+    padding-top: 0;
+    background: none;
+}
+.registro{
+    border: none;
+    padding-top: 0%;
+    background: none;
+}
+ul.formulario a li{
+    padding-top: 1%;
+}
+}

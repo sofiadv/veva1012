@@ -1,0 +1,50 @@
+<%- include('./partials/header') %> 
+        
+    <link rel="stylesheet" href="../stylesheets/formularios.css">
+    <div class="container formulario">
+        <div >
+            <h1 class="titulo-formulario">Complete sus datos</h1>
+            
+            <form id="form-2" class="edit-form" action="/users/register" method="POST" enctype="multipart/form-data" >
+             <div class="container-form">  
+                 <div>
+                    <div class="preview-imagen" id="imagePreview">
+                        <img src="" alt="" class="preview-imagen__imagen" id="previewimg">
+                        <span class="preview-imagen__text" id="previewtxt">Preview Imágen</span>
+                    </div>
+                    <div class="foto-producto-boton">
+                        <input type="file" name="avatar" id="inpFile">
+                    </div>
+                </div>
+
+                <div class="row formulario-grande">                         <div class="">
+                            <label for="first_name" class="formulario-label">Nombre</label>
+                            <input type="text" name="first_name" id="nombre" class="formulario-input-usuario">
+                        </div>
+                        <div class="">
+                            <label for="last_name" class="formulario-label">Apellido</label>
+                            <input type="text" name="last_name" id="apellido" class="formulario-input-usuario">
+                        </div>
+                        <div >
+                            <label for="email" class="formulario-label" id="emailtxt">Email:</label>
+                            <input type="email" name="email" id="email" class="formulario-input-usuario">
+                        </div>
+                        <div >
+                            <label for="password" class="formulario-label">Contraseña:</label>
+                            <input type="password" name="password" id="password" class="formulario-input-usuario">
+                        </div>
+                        <div class="password2">
+                            <label for="repassword" class="formulario-label">Reingrese su contraseña:</label>
+                            <input type="password" name="repassword" id="repassword" class="formulario-input-usuario">
+                        </div>                    
+                        <div>
+                            <button type="submit" class="registrar-boton">Registrarse</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+<script src="/scripts/checkEmail.js"></script>
+<script src="/scripts/editProfile.js"></script>
+<script src="/scripts/imagePreview.js"></script>
+<%- include('./partials/footer') %> 

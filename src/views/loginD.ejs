@@ -1,0 +1,29 @@
+<%- include('./partials/header') %> 
+        
+    <link rel="stylesheet" href="../stylesheets/formularios.css">
+    <div class="container formulario">
+        <div >
+            <h1 class="titulo-formulario">Ingrese sus datos</h1>
+            
+            <form class = "" action="/users/auth" method="POST">                
+                <div class="row formulario-grande"> 
+                        <div >
+                            <label for="email" class="formulario-label">Email:</label>
+                            <input type="email" name="email" id="email" class="formulario-input-usuario">
+                        </div>
+                        <div >
+                            <label for="password" class="formulario-label">Contraseña:</label>
+                            <input type="password" name="password" id="password" class="formulario-input-usuario">
+                        </div>
+                        <div>
+                            <label for="checkbox" class="formulario-label">Recordarme</label>
+                            <input class="formulario-checkbox" type="checkbox">
+                        </div>
+                        <div>
+                            <button type="submit" class="registrar-boton">Ingresar</button>
+                        </div>
+                </div>
+            </form>
+        </div>
+    </div>
+<%- include('./partials/footer') %> 

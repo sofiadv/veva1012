@@ -1,0 +1,46 @@
+<%- include('./partials/header') %> 
+<link rel="stylesheet" href="/stylesheets/perfil-grid.css">
+    <main class="contenedor">
+		<div class="header">
+			<h3>Perfil de Usuario</h3>
+		</div>
+		<div class="foto">
+			<img src="/images/avatar/<%= users.avatar %>" class="avatar" alt="">
+		</div>
+		<div class="label1 lbl">
+			<label for="">Nombre:</label>
+		</div>
+		<div class="input1 lbl">
+			<label for=""><%= users.first_name %></label>
+		</div>
+		<div class="label2 lbl">
+			<label for="">Apellido:</label>
+		</div>
+		<div class="input2 lbl">
+			<label for=""><%= users.last_name %></label>
+		</div>
+		<div class="label3 lbl">
+			<label for="">Email:</label>
+		</div>
+		<div class="input3 lbl">
+			<label for=""><%= users.email %></label>
+		</div>
+		<div class="editar">
+			<a href="/users/profile/edit">
+			<button type="submit" class="botonEditar">Editar</button>
+			</a>
+		</div>
+		<div class="eliminar">
+			<form action="/users/delete?_method=DELETE" method="POST" style="display: inline-flex" class="formDelete">
+			<button type="submit" class="deleteButton" id="deleteButton">Eliminar</button>
+			</form>
+		</div>
+    </main>
+
+<script src="/scripts/confirmDelete.js"></script>
+
+<%- include('./partials/footer') %> 
+
+
+
+

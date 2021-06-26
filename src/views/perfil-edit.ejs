@@ -1,0 +1,61 @@
+<%- include('./partials/header') %> 
+<link rel="stylesheet" href="/stylesheets/perfilEdit-grid.css">
+
+    <form class="contenedor edit-form" id="form1" action="/users/profile/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+		<div class="header">
+			<h3>Editar de Usuario</h3>
+		</div>
+		<div class="foto" id="imagePreview">
+			<img src="/images/avatar/<%= users.avatar%> " alt="" class="preview-imagen__imagen avatar" id="previewimg">
+            <span class="preview-imagen__text" id="previewtxt">Preview Imágen</span>
+		</div>
+		<div class="fotoBoton">
+			<input type="file" name="avatar" id="inpFile" class="fotoInput">
+		</div>
+		<div class="label1 lbl">
+			<label for="">Nombre:</label>
+		</div>
+		<div class="input1">
+			<input type="text" name="first_name" value= "<%= users.first_name %>" id="nombre">
+		</div>
+		<div class="label2 lbl">
+			<label for="">Apellido:</label>
+		</div>
+		<div class="input2">
+			<input type="text" name="last_name" value= "<%= users.last_name %>" id="apellido">
+		</div>
+		<div class="label3 lbl">
+			<label for="">Email:</label>
+		</div>
+		<div class="input3">
+			<input type="text" name="email" value= "<%= users.email %>" id="email">
+		</div>
+		<div class="label4 lbl">
+			<label for="">Cambiar Contraseña:</label>
+		</div>
+		<div class="input4">
+			<input type="password" name="password" id="password">
+		</div>
+		<div class="label5 lbl">
+			<label for="">Confirmar Contraseña:</label>
+		</div>
+		<div class="input5">
+			<input type="password" name="repassword" id="repassword">
+		</div>
+		<div class="editar">			
+			<button type="submit" class="botonEditar">Editar</button>
+		</div>
+		<div class="eliminar">
+			<button type="button" formaction="/users/delete/?_method=DELETE" class="deleteButton" id="deleteButton">Eliminar Usuario</button>
+		</div>
+    </form>
+
+<script src="/scripts/editImage.js"></script>
+<script src="/scripts/confirmDelete.js"></script>
+<!-- <script src="/scripts/imagePreview.js"></script> -->
+<script src="/scripts/editProfile.js"></script>
+
+<%- include('./partials/footer') %> 
+
+
+

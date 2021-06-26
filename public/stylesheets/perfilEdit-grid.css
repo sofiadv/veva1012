@@ -1,0 +1,176 @@
+.contenedor {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 70px;
+    grid-auto-rows: 50px;
+    gap: 10px;
+    color: white;
+    grid-template-areas: "header header header header header" 
+                         "foto label1 input1 label2 input2"
+                         "foto label3 input3 input3 input3"
+                         "foto label4 input4 label5 input5"
+                         "fotoBoton editar editar eliminar eliminar";
+}   
+
+.contenedor .header {
+    grid-area: header;
+}
+.contenedor .foto {
+    grid-area: foto;
+    align-self: center;
+    justify-self: center;
+}
+.contenedor .fotoBoton{
+    grid-area: fotoBoton;
+    align-self: center;
+}
+.contenedor .label1 {
+    grid-area: label1;
+    align-self: center;
+}
+.contenedor .input1 {
+    grid-area: input1;
+    align-self: center;
+}
+.contenedor .label2 {
+    grid-area: label2;
+    align-self: center;
+}
+.contenedor .input2 {
+    grid-area: input2;
+    align-self: center;
+}
+.contenedor .label3 {
+    grid-area: label3;
+    align-self: center;
+    justify-self: center;
+}
+.contenedor .input3 {
+    grid-area: input3;
+    align-self: center;
+}
+.contenedor .label4 {
+    grid-area: label4;
+    align-self: center;
+}
+.contenedor .input4 {
+    grid-area: input4;
+    align-self: center;
+}
+.contenedor .label5 {
+    grid-area: label5;
+    align-self: center;
+}
+.contenedor .input5 {
+    grid-area: input5;
+    align-self: center;
+}
+.contenedor .editar {
+    grid-area: editar;  
+    align-self: center;
+}
+.contenedor .eliminar {
+    grid-area: eliminar;
+    align-self: center;
+}
+
+.contenedor .header h3{
+    text-align: center;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+}
+
+.botonEditar {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.deleteButton {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+}
+
+.contenedor .lbl{
+    text-align: center;
+    font-size: 20px;
+}
+.contenedor input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #3a3636;
+    text-align: center;
+    color: white;
+    border-bottom: black solid;
+}
+
+.formDelete{
+    width: 100%;
+    justify-self: stretch;
+}
+.fotoInput {
+    font-size: 10px;
+}
+::placeholder {
+    font-size: 12px;
+}
+
+@media (max-width: 1020px) {
+    .contenedor {
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        grid-template-areas: "header header header"
+                             "foto label1 input1"
+                             "foto label2 input2"
+                             "fotoBoton label3 input3"
+                             "editar label4 input4"
+                             "eliminar label5 input5";
+    }
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+    .contenedor .label3 {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 620px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+        grid-template-areas: "header"
+                             "foto"
+                             "fotoBoton"
+                             "label1"
+                             "input1"
+                             "label2"
+                             "input2"
+                             "label3"
+                             "input3"
+                             "label4"
+                             "input4"
+                             "label5"
+                             "input5"
+                             "editar"
+                             "eliminar";
+    }
+    .avatar {
+        width: 70px;
+        height: 70px;
+    }
+    .contenedor .label3 {
+        justify-self: center;
+    }
+}
+

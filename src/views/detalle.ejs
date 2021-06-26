@@ -1,0 +1,74 @@
+<%- include('./partials/header') %> 
+
+</div>
+<link rel="stylesheet" href="/stylesheets/detalle.css">
+<link rel="stylesheet" href="/stylesheets/interesar.css">
+
+
+<div class="detail-container">
+    <h2>Detalle del Producto</h2>
+</div>
+<div class="pr-media-container">
+    <div class="img-pr-det-cont">
+        <img class="pr-det-img" src="/images/<%= products.imagen %>" alt="">
+    </div>
+   <div class="media-comprar"> 
+        <h3 class="pr-det-nombre"><%= products.nombre %> </h3>
+        <p><%= products.descripcion %> </p>
+         <h3 class="pr-det-nombre">Precio $<%= products.precio %> </h3>
+    </div>
+     <input class="detail-id" type="number" name="productId" form="form1" value="<%= products.id %>"  >  
+    <div class="icon-container">
+        <div class="icon-img-tarj-container">
+            <img class="icon-tarjeta" src="/images/tarjeta.png" alt="">
+        </div>
+        <div class="icon-txt">
+            <p>Paga con tu tarjeta en hasta 12 cuotas</p>
+        </div>
+    </div>
+    <div class="logistica">
+        <div class="icon-container">
+            <div class="icon-img-container">
+                <img class="icon" src="/images/small-truck.png" alt="">
+            </div>
+            <div class="logistica">
+                <div class="icon-txt-log">
+                    <p>Envio a domicilio</p> 
+                    <div class="check">
+                        <input class="btn-logistica" type="checkbox">
+                    </div>
+                </div>
+                <div class="retiro">
+                    <p>Retiro en el local</p>
+                    <div class="check1">
+                        <input class="btn-logistica-1" type="checkbox">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="cant-container">
+            <p class="cant-prod">Unidades disponibles</p>
+            <button class="btn-cant-1">+</button>
+                <div class="nro-cant">
+                    <input type="text" id="unidad" name="unidades_requeridas" form="form1" min="0" max="<%= products.unidades_disponibles %>" value="<%= products.unidades_disponibles %>">
+                </div>
+            <button class="btn-cant">-</button>
+        </div> 
+        <% if (typeof sessionUserId != 'undefined' && users.rol == 1) { %>
+            <form action="/products/edit/<%= products.id %>" method="GET">
+            <button class="btn-compra" type="submit">Editar Producto</button>
+            <button class="btn-compra" id="deleteButton" formaction="/products/delete/<%= products.id %>?_method=DELETE" formmethod="POST" type="submit">Eliminar Producto</button>
+            </form>
+        <% } else { %>
+            <form action="/products/carrito" method="POST" id="form1">
+            <button class="btn-compra1" type="submit">Comprar Ahora</button>
+            <button class="btn-compra" type="submit">Agregar a Carrito</button>
+            </form>
+        
+        <% } %>
+    </div>
+<%- include('./partials/podria-interesar') %>
+<script src="/scripts/confirmDelete.js"></script>
+<script src="/scripts/sumar-restar.js"></script>
+<%- include('./partials/footer') %>  

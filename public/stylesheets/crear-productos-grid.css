@@ -1,0 +1,163 @@
+body{
+    background-color: #3a3636;
+    color: white;
+}
+
+.contenedor {
+    display: grid;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    margin-top: 20px;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 30px repeat(6, 30px) 130px;
+    grid-template-areas: "header header header"
+                         "foto label1 label2"
+                         "foto input1 input2"
+                         "foto label5 label4"
+                         "foto input5 input4"
+                         "foto label3 label6"
+                         "foto input3 input6"
+                         "fotoBoton descripcion descripcion"
+                         "crear descripcion descripcion";
+}
+
+.contenedor .header {
+    grid-area: header;
+    align-self: center;
+    justify-self: center;
+    border-bottom: red;
+}
+.contenedor .foto {
+    grid-area: foto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.contenedor .foto img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.contenedor .label1 {
+    grid-area: label1;
+}
+.contenedor .input1 {
+    grid-area: input1;
+
+    width: 100%
+}
+.contenedor .label2 {
+    grid-area: label2;
+}
+.contenedor .input2 {
+    grid-area: input2;
+}
+.contenedor .label3 {
+    grid-area: label3;
+}
+.contenedor .input3 {
+    grid-area: input3;
+}
+.contenedor .label4 {
+    grid-area: label4;
+}
+.contenedor .input4 {
+    grid-area: input4;
+}
+.contenedor .label5 {
+    grid-area: label5;
+}
+.contenedor .input5 {
+    grid-area: input5;
+    text-align: center;
+}
+.contenedor .label6 {
+    grid-area: label6;
+}
+.contenedor .input6 {
+    grid-area: input6;
+}
+.contenedor .fotoBoton {
+    grid-area: fotoBoton;
+    border: none;
+    align-self: center;
+}
+.contenedor .descripcion {
+    grid-area: descripcion;
+    justify-self: start;
+}
+.contenedor .descripcion textarea{
+    width: 100%;
+}
+.contenedor .crear {
+    grid-area: crear;
+}
+
+.contenedor input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #3a3636;
+    text-align: center;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.contenedor select{
+    width: 100%;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    border-radius: 10px;
+}
+.contenedor option {
+    text-align: center;
+}
+
+.crearBoton {
+    align-self: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: red;
+    font-size: 20px;
+}
+::placeholder {
+    font-size: 12px;
+    text-align: center;
+}
+
+@media (max-width: 770px){
+
+    .contenedor {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "header header"
+                             "foto label1"
+                             "foto input1"
+                             "foto label2"
+                             "foto input2"
+                             "foto label3"
+                             "foto input3"
+                             "fotoBoton label4"
+                             "descripcion input4"
+                             "descripcion label5"
+                             "descripcion input5"
+                             "descripcion label6"
+                             "descripcion input6"
+                             "crear crear";
+    }
+    .contenedor textarea{
+        display: none;
+    }
+    .crearBoton {
+        height: 10px;
+        font-size: 8px;
+    }
+}

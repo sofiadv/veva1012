@@ -1,0 +1,27 @@
+<%- include('./partials/header') %> 
+<link rel="stylesheet" href="/stylesheets/e.css">
+<link rel="stylesheet" href="/stylesheets/grid-index.css">  
+    <div class="banner-container">
+            <img name="slider" class="slider" src="" alt="" >  
+    </div>
+    <h2 class="pr-promo">Mejores Productos</h2>
+    <main class="contenedor">
+        <% products.forEach(product => { %>
+                <div class="producto-contenedor">
+                    <div class="producto">
+                        <div class="foto-producto">
+                            <img class="img-prod" src="/images/<%= product.imagen %>" alt="">
+                        </div>
+                        <div class="texto-producto">
+                        <a href="/products/detail/<%= product.id %> ">
+                            <h2><%= product.nombre %> </h2>
+                            <p><%= product.descripcion %> </p>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+    </main>
+
+<%- include('./partials/footer') %> 
+<script src="/scripts/carrusel.js"></script>

@@ -1,0 +1,351 @@
+.detail-container{
+    background-color: #3a3636;
+}
+h2{
+    font-family: Dosis;
+    color: white;
+    margin-bottom: 2%;
+    text-align: center;
+}
+.pr-media-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.img-pr-det-cont {
+    width: 86%;
+    margin: auto;
+}
+.pr-det-img{
+    width: 100%;
+    border: solid rgb(77, 75, 75) 2px;
+    box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, .5);
+    border-radius: 10px;
+}
+.media-comprar{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.pr-det-nombre{
+    color: white;
+    margin: 1%;
+    font-family: Dosis;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+p{
+     color: white;
+    font-size: 10pt;
+    text-align: center;
+}
+.icon-container{
+    margin-bottom: 1%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-items: center;
+    margin-top: 5%;
+}
+
+.icon-img-tarj-container {
+    width: 50%;
+    padding-top: 1%;
+}
+
+.icon-tarjeta{
+    width: 100%;
+   
+}
+
+.icon-img-container {
+    width: 50%;
+    margin-top: 4%;
+}
+.icon-txt{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.icon-txt-log{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    justify-items: center;
+}
+.icon{
+    width: 100%; 
+}
+.logistica{
+    display: flex;
+}
+.envio{
+    margin-left: 3%;
+    margin-top: 1%;
+    padding-right: 2%;
+    padding-top: 1%;
+}
+
+.retiro{
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  justify-items: center;
+}
+
+.btn-logistica{
+    margin-top: 2.5%;
+}
+.cant-container{
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    margin-left: 3%;
+}
+
+.nro-cant {
+    margin-bottom: 2%;
+    color: white;
+    width: 35px;
+    height: 25px;
+    border: solid 2px #c62828;
+    margin-left: 1%;
+    margin-right: 1%;
+    text-align: center;
+}
+
+.btn-cant {
+    color: white;
+    background-color:#3a3636;
+    border: solid 2px #c62828;
+    width: 35px;
+    height: 25px;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+.btn-cant-1 {
+    color: white;
+    background-color:#3a3636;
+    border: solid 2px #c62828;
+    width: 35px;
+    height: 25px;
+    margin-right: 1%;
+    margin-left: 10%;
+}
+
+.btn-compra{
+    color: white;
+    background-color:#3a3636;
+    border: solid 2px #c62828;
+    margin-left: 7%;
+    width: 39%;
+    height: 30px;
+    margin-top: 3%;
+}
+.btn-compra1{
+    color: white;
+    background-color:#c62828;
+    border: solid 2px #c62828;
+    margin-left: 7%;
+    width: 39%;
+    height: 30px;
+    margin-top: 3%;
+}
+form{
+    margin-bottom: 4%;
+}
+.detail-id{
+  display: none;
+}
+@media (min-width: 375px) {
+   
+    .retiro{
+    }
+}
+@media (min-width: 425px) {
+    .btn-cant-1{
+    }
+    .icon-txt {
+    }     
+}
+@media(min-width:768px){
+h2{
+    margin-bottom: 0.5%;
+    font-size: 24pt;
+   }
+   
+   p{
+       font-size: 14pt;
+   }
+
+h1 {
+    margin-left: 3%;
+    text-align: left;
+}
+
+.pr-media-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-pr-det-cont {
+    width: 85%;
+    margin: auto;
+}
+
+.media-comprar {
+   
+}
+
+.envio {
+    margin-top: 2%;
+    padding-right: 1%;
+    margin-left: 3%;
+}
+
+.pr-det-nombre {
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+
+.icon-img-container {
+}
+
+.icon {
+    width: 100%;
+}
+
+.icon-img-tarj-container {
+    
+}
+.icon-txt {
+}
+.icon-tarjeta{
+    width: 100%;
+}
+.icon-img-container{
+}
+.icon-container {
+    margin-bottom: 5%;
+}
+.check{
+    margin-top: 45%;
+}
+.check1{
+    margin-top: 45%;
+}
+
+.btn-logistica {
+    margin-top: 5%;
+}
+
+.retiro {
+}
+
+.cant-container {
+    margin-top: 1%;
+    margin-left: 3%;
+}
+
+.nro-cant {
+    width: 50px;
+    height: 35px;
+   padding-top: 1%;
+}
+
+.cant-prod {
+    margin-top: 1%;
+}
+
+.btn-cant {
+    width: 50px;
+    height: 35px;
+}
+.btn-cant-1 {
+    width: 50px;
+    height: 35px;
+    margin-left: 5%;
+}
+
+.btn-compra-cont{
+    display: flex;
+}
+
+.btn-compra {
+    height: 40px;
+    margin-top: 0;
+    margin: auto;
+    margin-top: 3%;
+}
+.btn-compra1 {
+    height: 40px;
+    margin-top: 0;
+    margin: auto;
+}
+form{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+}
+@media(min-width:1024px)
+{
+    h2{
+        font-size: 34pt;
+        margin-bottom: 3%;
+    }
+    
+    .pr-det-nombre {
+        font-size: 30pt;
+    }
+    p{
+        font-size: 20pt;
+    }
+    .retiro{
+
+    }
+    .icon-container {
+        margin-bottom: 3%;
+    }
+
+    .btn-logistica {
+    
+    }
+
+    .envio {
+    
+    }
+
+    .nro-cant {
+        padding-top: 0;
+        font-size: 16pt;
+    }
+
+    .btn-cant {
+      
+    }
+    .btn-cant-1{
+        
+    }
+
+    .btn-compra {
+        font-size: 15pt;
+    }
+    .btn-compra1{
+        font-size: 15pt;
+       
+    }
+    form{
+    
+    }
+
+    .otros-prod {
+       
+    }
+
+    .interes-container {
+       
+    }
+
+}
+
+
+
+
+
+   

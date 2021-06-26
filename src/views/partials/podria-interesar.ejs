@@ -1,0 +1,20 @@
+<hr color="red" class="separador">
+<h2 class="titulo">Tambien podria Interesarte</h2>
+<hr color="red" class="separador">
+<div class="contenedor">
+    <% otrosProducts.forEach(otrosProduct => { %>
+            <div class="producto-contenedor">
+                <div class="producto">
+                    <div class="foto-producto">
+                        <img class="img-prod" src="/images/<%= otrosProduct.imagen %>" alt="">
+                    </div>
+                    <div class="texto-producto">
+                    <a href="/products/detail/<%= otrosProduct.id %> ">
+                        <h2><%= otrosProduct.nombre %> </h2>
+                        <p><%= otrosProduct.descripcion %> </p>
+                    </a>
+                    </div>
+                </div>
+            </div>
+    <% }) %>
+</div>

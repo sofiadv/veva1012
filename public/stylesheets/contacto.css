@@ -1,0 +1,29 @@
+body{
+    color: whitesmoke;
+}
+.contacto-container{
+    margin: 8%;
+}
+.titulo-contacto{
+    text-align: center;
+    margin-bottom: 6%;
+}
+.nosotros{
+    background-color: #1b1919;
+    margin: auto;
+    width: 90%;
+}
+.contacto{
+    text-align: center;
+}
+.horarios{
+    text-align: center;
+}
+@media(min-width: 1024px){
+ .contact{
+     font-size: 20pt;
+ }
+ .nosotros{
+    font-size: 20pt;
+ }
+}

@@ -1,0 +1,46 @@
+<%- include('./partials/header') %> 
+
+    <link rel="stylesheet" href="/stylesheets/grid-carrito.css">
+    <div class="big-cont">
+    <h1 class="titulo">
+        Carrito de compras
+    </h1>
+    <div class="contenedor1">
+        <div class="textos">Imagen</div>
+        <div class="textos">Producto</div>
+        <div class="textos">Precio Individual</div>
+        <div class="textos">Cantidad de unidades</div>
+        <div class="textos">Eliminar Producto</div>
+        <div class="textos">Subtotal</div>
+    </div>
+    <% let total = 0 %>
+    <% const toThousand = n =>n.toString().replace( /\B(?=(\d{3})+(?!\d))/g,"." ) ; %>
+    <% carrito.forEach(carro => { %>
+     
+        <div class="contenedor2">
+            <div class="imagen"><img src="/images/<%= carro.imagen%>" class="foto-prod" ></div>
+            <div class="producto"><%= carro.nombre + " " + marcas[carro.marca_id - 1].nombre %> </div>
+            <% let precioFinal = carro.precio * (1 - (carro.descuento/100))%> 
+            <div class="precio">$<%= precioFinal.toFixed(2) %> </div>
+            <div class="cantidad"><%= carro.unidades_requeridas %> </div>
+            <div class="quitar">
+                <form action="/products/carrito/delete/<%= carro.id %>?_method=DELETE" method="POST">
+                    <button type="submit">Eliminar</button>
+                </form>
+            </div>
+            <% let precioTotal = precioFinal * carro.unidades_requeridas %> 
+            <div class="subtotal">$<%= precioTotal.toFixed(2) %> </div>
+        </div>
+        <% total = total + (precioFinal * carro.unidades_requeridas)  %> 
+        <% }) %>
+    <div class="contenedor3">
+        <div class="comprar">
+            <form action="">
+                <button type="submit" class="finalizar">Finalizar compra</button>
+            </form>
+        </div>
+        <div class="totaltxt">Total:</div>
+        <div class="total">$<%= total.toFixed(2) %></div>
+    </div>
+</div>
+<%- include('./partials/footer') %> 
